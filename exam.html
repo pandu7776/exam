@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>English Grammar Online Exam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       body {
+    background: #f6f8fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 540px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 32px 24px 24px 24px;
+}
+h2 {
+    text-align: center;
+    color: #1a237e;
+    margin-bottom: 28px;
+}
+.question, .reading, .writing {
+    margin-bottom: 28px;
+}
+.question-title, .reading-title, .writing-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+li {
+    margin-bottom: 8px;
+}
+label {
+    cursor: pointer;
+}
+.submit-btn, .next-btn {
+    display: block;
+    width: 100%;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    padding: 12px 0;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+.submit-btn:hover, .next-btn:hover {
+    background: #1256a3;
+}
+.score {
+    margin-top: 24px;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    color: #388e3c;
+}
+.paragraph {
+    background: #f0f4ff;
+    border-left: 4px solid #1976d2;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+textarea {
+    width: 100%;
+    min-height: 80px;
+    border-radius: 6px;
+    border: 1px solid #b0bec5;
+    padding: 10px;
+    font-size: 1em;
+    resize: vertical;
+}
+.hidden {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h2>English Grammar Online Exam</h2>
+    
+    <!-- Name Entry -->
+    <form id="nameForm">
+        <div class="question-title">Enter your name to begin the test:</div>
+        <input type="text" id="userNameInput" required style="width:100%;padding:8px;font-size:1em;">
+        <button type="submit" class="submit-btn">Start Test</button>
+    </form>
+
+    <!-- Round 1: Grammar MCQ -->
+    <form id="round1" class="round hidden">
+        <!-- ... (same as before) ... -->
+        <div class="question">
+            <div class="question-title">1. Choose the correct form of the verb: She _____ to school every day.</div>
+            <ul>
+                <li><label><input type="radio" name="q1" value="a" required> goes</label></li>
+                <li><label><input type="radio" name="q1" value="b"> go</label></li>
+                <li><label><input type="radio" name="q1" value="c"> going</label></li>
+                <li><label><input type="radio" name="q1" value="d"> gone</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <div class="question-title">2. Identify the adjective in the sentence: The quick brown fox jumps over the lazy dog.</div>
+            <ul>
+                <li><label><input type="radio" name="q2" value="a" required> quick</label></li>
+                <li><label><input type="radio" name="q2" value="b"> jumps</label></li>
+                <li><label><input type="radio" name="q2" value="c"> fox</label></li>
+                <li><label><input type="radio" name="q2" value="d"> dog</label></li>
+            </ul>
+        </div>
+        <div class="question">
+            <div class="question-title">3. Choose the correct sentence:</div>
+            <ul>
+                <li><label><input type="radio" name="q3" value="a" required> She don't like apples.</label></li>
+                <li><label><input type="radio" name="q3" value="b"> She doesn't like apples.</label></li>
+                <li><label><input type="radio" name="q3" value="c"> She not like apples.</label></li>
+                <li><label><input type="radio" name="q3" value="d"> She isn't likes apples.</label></li>
+            </ul>
+        </div>
+        <button type="submit" class="submit-btn">Next: Reading</button>
+    </form>
+
+    <!-- Round 2: Reading Comprehension -->
+    <form id="round2" class="round hidden">
+        <!-- ... (same as before) ... -->
+        <div class="reading">
+            <div class="reading-title">Read the paragraph and answer the questions:</div>
+            <div class="paragraph">
+                Sarah loves to read books. Every evening, she sits by the window with her favorite novel. Sometimes, her cat joins her and curls up on her lap. Reading makes Sarah feel relaxed and happy.
+            </div>
+            <div class="question">
+                <div class="question-title">1. What does Sarah love to do?</div>
+                <ul>
+                    <li><label><input type="radio" name="r1" value="a" required> Watch TV</label></li>
+                    <li><label><input type="radio" name="r1" value="b"> Read books</label></li>
+                    <li><label><input type="radio" name="r1" value="c"> Cook dinner</label></li>
+                    <li><label><input type="radio" name="r1" value="d"> Play games</label></li>
+                </ul>
+            </div>
+            <div class="question">
+                <div class="question-title">2. Who sometimes joins Sarah?</div>
+                <ul>
+                    <li><label><input type="radio" name="r2" value="a" required> Her friend</label></li>
+                    <li><label><input type="radio" name="r2" value="b"> Her cat</label></li>
+                    <li><label><input type="radio" name="r2" value="c"> Her brother</label></li>
+                    <li><label><input type="radio" name="r2" value="d"> Her dog</label></li>
+                </ul>
+            </div>
+            <div class="question">
+                <div class="question-title">3. How does Sarah feel when she reads?</div>
+                <ul>
+                    <li><label><input type="radio" name="r3" value="a" required> Bored</label></li>
+                    <li><label><input type="radio" name="r3" value="b"> Relaxed and happy</label></li>
+                    <li><label><input type="radio" name="r3" value="c"> Angry</label></li>
+                    <li><label><input type="radio" name="r3" value="d"> Sleepy</label></li>
+                </ul>
+            </div>
+        </div>
+        <button type="submit" class="submit-btn">Next: Writing</button>
+    </form>
+
+    <!-- Round 3: Writing -->
+    <form id="round3" class="round hidden">
+        <div class="writing">
+            <div class="writing-title">Write a short paragraph (3-5 sentences) about your favorite hobby.</div>
+            <textarea id="writingInput" required placeholder="Type your paragraph here..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Finish & See Score</button>
+    </form>
+
+    <!-- Final Score -->
+    <div id="score" class="score hidden"></div>
+
+    <!-- Hidden email form for Formspree -->
+    <form id="emailForm" action="https://formspree.io/f/mqaqdbza" method="POST" class="hidden">
+        <input type="hidden" name="name" id="formName">
+        <input type="hidden" name="score" id="formScore">
+    </form>
+</div>
+
+<script>
+    let totalScore = 0;
+    let maxScore = 9; // 3 per round
+    let userName = "";
+
+    // Round 1 answers
+    const round1Answers = { q1: 'a', q2: 'a', q3: 'b' };
+    // Round 2 answers
+    const round2Answers = { r1: 'b', r2: 'b', r3: 'b' };
+
+    // Name Entry
+    document.getElementById('nameForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        userName = document.getElementById('userNameInput').value.trim();
+        if (userName.length === 0) return;
+        this.classList.add('hidden');
+        document.getElementById('round1').classList.remove('hidden');
+    });
+
+    // Round 1
+    document.getElementById('round1').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let score = 0;
+        for (let q in round1Answers) {
+            let userAnswer = this[q].value;
+            if (userAnswer === round1Answers[q]) score++;
+        }
+        totalScore += score;
+        this.classList.add('hidden');
+        document.getElementById('round2').classList.remove('hidden');
+    });
+
+    // Round 2
+    document.getElementById('round2').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let score = 0;
+        for (let r in round2Answers) {
+            let userAnswer = this[r].value;
+            if (userAnswer === round2Answers[r]) score++;
+        }
+        totalScore += score;
+        this.classList.add('hidden');
+        document.getElementById('round3').classList.remove('hidden');
+    });
+
+    // Writing round scoring function (simple heuristic)
+    function scoreWriting(text) {
+        let score = 0;
+        let sentences = text.match(/[^\.!\?]+[\.!\?]+/g);
+        if (sentences && sentences.length >= 3) score++;
+        if (sentences && sentences.every(s => s.trim()[0] && s.trim()[0] === s.trim()[0].toUpperCase())) score++;
+        let words = text.trim().split(/\s+/);
+        if (words.length >= 30) score++;
+        return score;
+    }
+
+    // Round 3
+    document.getElementById('round3').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let text = document.getElementById('writingInput').value.trim();
+        let writingScore = scoreWriting(text);
+        totalScore += writingScore;
+
+        // Show score
+        this.classList.add('hidden');
+        let scoreDiv = document.getElementById('score');
+        scoreDiv.classList.remove('hidden');
+        scoreDiv.innerHTML = `
+            <div>Grammar Round: 3 / 3</div>
+            <div>Reading Round: 3 / 3</div>
+            <div>Writing Round: ${writingScore} / 3</div>
+            <hr>
+            <div style="font-size:1.3em;">Total Score: ${totalScore} / 9</div>
+            <div>Your result is being sent to the examiner.</div>
+        `;
+
+        // Fill and submit Formspree form
+        document.getElementById('formName').value = userName;
+        document.getElementById('formScore').value = totalScore + " / 9";
+        document.getElementById('emailForm').submit();
+    });
+</script>
+</body>
+</html>
